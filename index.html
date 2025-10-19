@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Diwali ✨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at center, #ffcc70, #ff8c00, #d14719);
+      overflow-x: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff8e7;
+      text-shadow: 2px 2px 10px #ffcc00;
+      animation: glow 2s infinite alternate;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffcc00; }
+      to { text-shadow: 0 0 25px #ff6600, 0 0 50px #ff3300; }
+    }
+
+    .diyas {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .diya {
+      width: 100px;
+      animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.4); }
+    }
+
+    .wish-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      margin: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 223, 0, 0.8);
+      transition: 0.3s;
+    }
+
+    .wish-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 255, 100, 1);
+    }
+
+    #wish-btn {
+      background-color: #ffb300;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    #wish-btn:hover {
+      background-color: #ff6f00;
+      transform: scale(1.1);
+    }
+
+    /* Floating Lights */
+    .lights::before, .lights::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle, #fff, transparent 20%),
+                        radial-gradient(circle, #ffd700, transparent 20%),
+                        radial-gradient(circle, #ff6f00, transparent 20%);
+      background-size: 200px 200px;
+      animation: sparkle 10s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes sparkle {
+      0% { background-position: 0 0, 100px 100px, 200px 200px; }
+      100% { background-position: 200px 200px, 300px 0, 0 300px; }
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #fff5cc;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.3rem; }
+      p { font-size: 1rem; }
+      .diya { width: 70px; }
+      #wish-btn { padding: 10px 20px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎆 Happy Diwali 🎆</h1>
+      <p>Wishing you and your family a bright, joyous, and prosperous Diwali!</p>
+    </header>
+
+    <main>
+      <div class="diyas">
+        <img src="https://i.ibb.co/JB9c7P1/diya1.png" alt="Diya" class="diya" />
+        <img src="https://i.ibb.co/JB9c7P1/diya1.png" alt="Diya" class="diya" />
+        <img src="https://i.ibb.co/JB9c7P1/diya1.png" alt="Diya" class="diya" />
+      </div>
+
+      <div class="wish-card">
+        <h2>🪔 May this Diwali bring light, love, and laughter into your life 🪔</h2>
+        <button id="wish-btn">Send Diwali Wishes 💌</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ for Family & Friends | © 2025 Diwali Celebration</p>
+    </footer>
+  </div>
+
+  <!-- Floating Lights Animation -->
+  <div class="lights"></div>
+
+  <script>
+    document.getElementById("wish-btn").addEventListener("click", function() {
+      alert("🪔 Happy Diwali! May your life be filled with brightness, happiness, and prosperity! 🎇");
+    });
+  </script>
+</body>
+</html>
